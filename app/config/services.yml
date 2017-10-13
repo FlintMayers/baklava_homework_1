@@ -36,3 +36,8 @@ services:
 
     app.form.registration:
         class: AppBundle\Form\RegistrationFormType
+
+    app.gravatar:
+        class: AppBundle\Gravatar\GravatarFetcher
+        public: true
+        tags: ['twig.extension']

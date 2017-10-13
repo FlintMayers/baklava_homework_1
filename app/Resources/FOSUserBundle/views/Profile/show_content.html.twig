@@ -5,7 +5,7 @@
     <div class="well">
         <div class="row">
             <div class="col-xs-3">
-                <img src="{{ grav_url }}" alt="User logo" />
+                <img src="{{ user.email | gravatar }}" alt="User logo" />
             </div>
             <div class="col-xs-5 col-xs-offset-2">
                 <h4>{{ 'profile.show.username'|trans }}: {{ user.username }}</h4>
@@ -25,4 +25,3 @@
         </div>
     </div>
 </div>
-
