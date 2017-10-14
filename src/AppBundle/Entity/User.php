@@ -74,5 +74,12 @@ class User extends BaseUser
         return $this->id;
     }
 
+    public function getAvatar()
+    {
+        $grav_url = 'https://www.gravatar.com/avatar/' . md5( strtolower( trim( $this->email ) ) );
+
+        return $grav_url;
+    }
+
 
 }
