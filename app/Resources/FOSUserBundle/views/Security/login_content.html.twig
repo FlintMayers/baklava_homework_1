@@ -1,6 +1,6 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-{% if is_granted("ROLE") == true %}
+{% if is_granted("ROLE_USER") == false %}
 <div class="container">
     <div class="wrapper col-md-5">
 
