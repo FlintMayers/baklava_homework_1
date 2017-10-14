@@ -1,5 +1,6 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
+{% if is_granted("ROLE") == true %}
 <div class="well">
 
     <h1 class="text-center">Registration form</h1>
@@ -28,3 +29,5 @@
     </div>
     {{ form_end(form) }}
 </div>
+
+{% endif %}

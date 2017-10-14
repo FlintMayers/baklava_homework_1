@@ -1,10 +1,13 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-{% if error %}
-    <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-{% endif %}
+{% if is_granted("ROLE") == true %}
 <div class="container">
-    <div class="wrapper">
+    <div class="wrapper col-md-5">
+
+        {% if error %}
+            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+        {% endif %}
+
         <form action="{{ path("fos_user_security_check") }}" method="post" class="form-signin">
 
             <h3 class="form-signin-heading">Welcome Back! Please Sign In</h3>
@@ -24,3 +27,5 @@
         </form>
     </div>
 </div>
+
+{% endif %}
