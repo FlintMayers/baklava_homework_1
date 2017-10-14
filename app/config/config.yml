@@ -79,3 +79,9 @@ fos_user:
     registration:
         form:
             type: AppBundle\Form\RegistrationFormType
+
+easy_admin:
+    entities:
+        - AppBundle\Entity\User
+    list:
+        actions: ['edit', 'search', 'show']
