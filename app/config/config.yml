@@ -88,9 +88,9 @@ easy_admin:
                 actions: ['edit', 'search', 'show']
                 fields:
                     - id
-                    - {property: 'avatar', type: 'image'}
-                    - username
+                    - {property: 'emailCanonical', template: 'gravatar.html.twig', label: 'Gravatar' }
                     - email
+                    - username
                     - firstName
                     - lastName
                     - enabled
