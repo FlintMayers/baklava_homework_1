@@ -13,6 +13,7 @@
                     {{ use }}
                 {% endfor %}
                 <h4>{{ 'profile.show.email'|trans }}: {{ user.email }}</h4>
+                <h4>Phone: {{ user.phone }}</h4>
                 <h4>Status:
                     {% if user.enabled %}
                         <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>

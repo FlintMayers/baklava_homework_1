@@ -17,7 +17,7 @@ class RegistrationFormType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('firstName')->add('lastName');
+        $builder->add('companyName')->add('legalEntityCode')->add('phone');
     }
 
     public function getParent()

@@ -24,47 +24,73 @@ class User extends BaseUser
      */
     protected $id;
 
-    /**
-     * @ORM\Column(type="string")
-     */
-    private $firstName;
 
     /**
      * @ORM\Column(type="string")
      */
-    private $lastName;
+    private $phone;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $legal_entity_code;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    private $company_name;
+
 
     /**
      * @return mixed
      */
-    public function getLastName()
+    public function getPhone()
     {
-        return $this->lastName;
+        return $this->phone;
     }
 
     /**
-     * @param mixed $lastName
+     * @param mixed $phone
      */
-    public function setLastName($lastName)
+    public function setPhone($phone)
     {
-        $this->lastName = $lastName;
+        $this->phone = $phone;
     }
 
     /**
      * @return mixed
      */
-    public function getFirstName()
+    public function getCompanyName()
     {
-        return $this->firstName;
+        return $this->company_name;
     }
 
     /**
-     * @param mixed $firstName
+     * @param mixed $company_name
      */
-    public function setFirstName($firstName)
+    public function setCompanyName($company_name)
     {
-        $this->firstName = $firstName;
+        $this->company_name = $company_name;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getLegalEntityCode()
+    {
+        return $this->legal_entity_code;
+    }
+
+    /**
+     * @param mixed $legal_entity_code
+     */
+    public function setLegalEntityCode($legal_entity_code)
+    {
+        $this->legal_entity_code = $legal_entity_code;
+    }
+
+
+
 
     /**
      * @return mixed
